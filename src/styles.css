@@ -80,7 +80,7 @@ a { color: inherit; }
 }
 @keyframes kenburns {
   from { transform: scale(1.05); }
-  to { transform: scale(1.16) translate(-1.5%, -1%);
+  to { transform: scale(1.16) translate(-1.5%, -1%); }
 }
 .hero-shade {
   position: absolute; inset: 0;
