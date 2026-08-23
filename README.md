@@ -1,27 +1,51 @@
 # VIZIATA Charter
 
-Premium React landing page for chartering **VIZIATA**, a 130' Westport motor yacht based in the Bahamas.
+Premium React landing page for chartering **VIZIATA**, a 130' Westport based in the Bahamas.
 
-- GitHub: [shregime/viziata-charter](https://github.com/shregime/viziata-charter)
-- Stack: Vite + React, deployed on Vercel (Hobby)
+New GitHub repo: [shregime/viziata-charter](https://github.com/shregime/viziata-charter)  
+Not `studio22-landing` or `studio22-site`.
 
-## Local
+## Local (complete, with brochure photos)
 
 ```bash
+cd /Users/Regime/src/viziata-charter
 npm install
 npm run dev
 ```
 
-## Charter inquiries
+Preview is also at `http://127.0.0.1:4173` if `npm run preview` is running.
 
-Set `VITE_INQUIRY_EMAIL` in a `.env` file (or Vercel project env) so the booking form posts via FormSubmit:
+## Push photos and latest source
 
+This machine does not have GitHub HTTPS credentials. From a logged-in terminal:
+
+```bash
+cd /Users/Regime/src/viziata-charter
+git remote add origin https://github.com/shregime/viziata-charter.git   # if needed
+git push -u origin main
 ```
-VITE_INQUIRY_EMAIL=you@email.com
+
+## Vercel Hobby (new project)
+
+Do **not** reuse the Studio 22 Vercel projects. Import this repo as a new Hobby project:
+
+1. Open [vercel.com/new](https://vercel.com/new)
+2. Import `shregime/viziata-charter`
+3. Framework: Vite. Root: `./`
+4. Deploy
+
+Or from the repo after login:
+
+```bash
+npx vercel@32.3.0 login --github --oob
+npx vercel@32.3.0 --yes --name viziata-charter --prod
 ```
 
-If it is not set, the form opens a pre-filled mail draft. Fraser Yachts remains a broker path on the page.
+## Specs used
 
-## Photos
+Fraser is treated as current (summer from $99,000; 2026 32' World Cat).  
+YachtCharterFleet supplies beam, draft, range, cabin split, and 24/28 knot speeds.
 
-Yacht photography is from the official VIZIATA charter brochure. The walkthrough video is the Fraser Yachts tour.
+## Inquiries
+
+Set `VITE_INQUIRY_EMAIL` if you want FormSubmit to a different inbox. Default is the GitHub account email.
